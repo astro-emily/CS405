@@ -20,3 +20,6 @@ create table forelimb(RRCase INT NOT NULL, date_of_euthansia DATE, leg VARCHAR(3
   FOREIGN KEY (RRCase)
     REFERENCES deceased_horses(RRCase)
 );
+
+create table login(username VARCHAR(30) PRIMARY KEY, password VARCHAR(30));
+insert into login(username, password) values("cs405", "cs405");
