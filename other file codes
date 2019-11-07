@@ -1,0 +1,182 @@
+// For a file called session.php
+<?php
+// mysqli_connect() function opens a new connection to the MySQL server.
+$conn = mysqli_connect("localhost", "root", "1234", "project");
+session_start();// Starting Session
+// Storing Session
+$user_check = $_SESSION['login_user'];
+// SQL Query To Fetch Complete Information Of User
+$query = "SELECT username from login where username = '$user_check'";
+$ses_sql = mysqli_query($conn, $query);
+$row = mysqli_fetch_assoc($ses_sql);
+$login_session = $row['username'];
+?>
+
+// For a file called profile.php
+<?php
+include('session.php');
+if(!isset($_SESSION['login_user'])){
+header("location: index.php"); // Redirecting To Home Page
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Your Home Page</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="profile">
+<b id="welcome">Welcome : <i><?php echo $login_session; ?></i></b>
+<b id="logout"><a href="logout.php">Log Out</a></b>
+</div>
+</body>
+</html>
+
+// For a file called logout.php
+<?php
+session_start();
+if(session_destroy()) // Destroying All Sessions {
+header("Location: index.php"); // Redirecting To Home Page
+}
+?>
+
+// For a file called style.css
+/*----------------------------------------------
+CSS Settings For HTML Div ExactCenter
+------------------------------------------------*/
+span {
+color:red
+}
+h2
+
+{
+text-align:center;
+border-radius:10px 10px 0 0;
+margin:-10px -40px;
+padding:15px
+}
+hr
+
+{
+border:0;
+border-bottom:1px solid;
+margin:10px -40px;
+margin-bottom:30px
+}
+#login
+
+{
+margin: auto;
+width:450px;
+border-radius:10px;
+border:2px solid #ccc;
+padding:10px 40px 25px;
+background-color:#b6e6ff;
+}
+input[type=text],input[type=password]
+
+{
+width:96.5%;
+padding:10px;
+margin-top:8px;
+border:1px solid #ccc;
+padding-left:5px;
+font-size:20px;
+}
+input[type=submit]
+
+{
+width:100%;
+background-color:#2f90ff;
+color:#fff;
+border:2px solid #white;
+padding:10px;
+font-size:20px;
+cursor:pointer;
+border-radius:5px;
+}
+#profile
+
+{
+padding:50px;
+border:1px dashed grey;
+font-size:20px;
+background-color:#DCE6F7
+}
+#logout
+
+{
+float:right;
+padding:5px;
+border:dashed 1px gray
+}
+a
+
+{
+text-decoration:none;
+color:#6495ed
+}
+i
+
+{
+color:#6495ed
+}
+
+// For a file called index.php
+<?php
+include('login.php'); // Includes Login Script
+if(isset($_SESSION['login_user'])){
+header("location: profile.php"); // Redirecting To Profile Page
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Form in PHP with Session</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="login">
+<h2>Login Form</h2>
+<form action="" method="post">
+<label>UserName :</label>
+<input id="name" name="username" placeholder="username" type="text">
+<label>Password :</label>
+<input id="password" name="password" placeholder="**********" type="password"><br><br>
+<input name="submit" type="submit" value=" Login ">
+<span><?php echo $error; ?></span>
+</form>
+</div>
+</body>
+</html>
+
+// For a file called Login.php
+<?php
+session_start(); // Starting Session
+$error = ''; // Variable To Store Error Message
+if (isset($_POST['submit'])) {
+if (empty($_POST['username']) || empty($_POST['password'])) {
+$error = "Username or Password is invalid";
+}
+else{
+// Define $username and $password
+$username = $_POST['username'];
+$password = $_POST['password'];
+// mysqli_connect() function opens a new connection to the MySQL server.
+$conn = mysqli_connect("localhost", "root", "1234", "project");
+// SQL query to fetch information of registerd users and finds user match.
+$query = "SELECT username, password from login where username=? AND password=? LIMIT 1";
+// To protect MySQL injection for Security purpose
+$stmt = $conn->prepare($query);
+$stmt->bind_param("ss", $username, $password);
+$stmt->execute();
+$stmt->bind_result($username, $password);
+$stmt->store_result();
+if($stmt->fetch()) //fetching the contents of the row {
+$_SESSION['login_user'] = $username; // Initializing Session
+header("location: profile.php"); // Redirecting To Profile Page
+}
+mysqli_close($conn); // Closing Connection
+}
+?>
