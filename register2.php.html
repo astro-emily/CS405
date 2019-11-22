@@ -1,0 +1,70 @@
+Last login: Wed Nov  6 14:42:30 on ttys000
+(base) Reyatijiangs-MacBook-Air-3:~ reyatijiang$ ssh nre228@nre228.cs.uky.edu
+nre228@nre228.cs.uky.edu's password: 
+Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-60-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Nov  6 14:47:26 EST 2019
+
+  System load:  0.15               Processes:           213
+  Usage of /:   25.2% of 38.60GB   Users logged in:     1
+  Memory usage: 43%                IP address for ens3: 172.31.146.63
+  Swap usage:   0%
+
+ * Kata Containers are now fully integrated in Charmed Kubernetes 1.16!
+   Yes, charms take the Krazy out of K8s Kata Kluster Konstruction.
+
+     https://ubuntu.com/kubernetes/docs/release-notes
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+159 packages can be updated.
+0 updates are security updates.
+
+
+*** System restart required ***
+
+============================================================================
+Welcome to the Department of Computer Science Openstack VM created for you!
+
+Reference https://www.cs.uky.edu/docs/users/openstack.html for help/howto 
+information.
+
+Email <help@cs.uky.edu> if the documentation does not answer your question.
+============================================================================
+Last login: Wed Nov  6 14:42:37 2019 from 10.47.103.177
+nre228@nre228:~$ cd /var/www/html
+nre228@nre228:/var/www/html$ ls
+Downloads    dbh.inc.php  header.php  index.html  newsignup.php   signup.php
+config.php   dbsetup.php  hello.php   index.php   register.php    take_this
+config2.php  footer.php   includes    info.php    signup.inc.php
+nre228@nre228:/var/www/html$ vim index.php
+nre228@nre228:/var/www/html$ vim signup.php
+nre228@nre228:/var/www/html$ vim signup.php
+nre228@nre228:/var/www/html$ vim register.php
+nre228@nre228:/var/www/html$ vim register.php
+
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" value="">
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group ">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" class="form-control" value="">
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Submit">
+                <input type="reset" class="btn btn-default" value="Reset">
+            </div>
+            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+        </form>
+    </div>
+</body>
+</html>
+

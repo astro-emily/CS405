@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- 
+inserthorse.php
+by David Gallivan
+
+This form successfully receives horse data from the user and enters it into the DB.
+It then links back to the welcome page.
+Somebody please imitate this and create a page to insert pathology data for a given horse.
+Remember that one horse can have multiple pathology assessments!
+
+OUTSTANDING ISSUES TO BE FIXED:
+ - The checkboxes do nothing. To make the case numbers null, enter 0 into their fields.
+ - Age at first race cannot be made null; the checkbox there is also useless for now.
+ - The page is ugly and tacky
+ -->
+
+
+
+<html lang='en'>
+<head>
+</h3><title>Insert horse</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+	<style type="text/css">
+		body{ font: 14px sans-serif; }
+		.wrapper{ width: 350px; padding: 20px; }
+	</style>
+</head>
+<body>
+<div class='wrapper'>
+<h1>Signalment, Racing, and Clinical Data</h1>
+<h3><br></br>Signalment</h3>
+<form action='/inserthorse.php' method='post'>
+  <label>Horse's Name</label>
+    <input type='text' name='Name' class='form-control'></input>
+  <label>Breed<br></br></label>
+    <select name='Breed'>
+      <option value='Thoroughbred'>Thoroughbred</option>
+      <option value='Standardbred'>Standardbred</option>
+      <option value='Sprint bred'>Sprint bred</option>
+      <option value='Arabian'>Arabian</option>
+    </select><br></br>
+  <label>Date of Birth</label>
+    <input type="date" name='DOB'></input><br></br>
+  <label>Gender</label><br></br>
+    <select name='Gender'>
+      <option value='Intact male'>Intact male</option>
+      <option value='Gelding'>Gelding</option>
+      <option value='Female'>Female</option>
+      <option value='Spayed female'>Spayed female</option>
+    </select><br></br>
+  <label>UKVDL Case No.</label><br></br>
+    <input type='checkbox' name='ukvdlcasenum' value='0'>Not applicable</input><br></br>
+    <input type='number'  name = 'ukvdlcasenum'></input><br></br>
+  <label>RREH Case No.</label><br></br>
+    <input type='checkbox' name='rrehna' value='0'>Not applicable</input><br></br>
+    <input type='number' name='rrehcasenum'></input><br></br>
+<h3><br></br>Racing and Training</h3>
+  <label>Was this horse ever in race training?</label>
+    <select name='racetraining'>
+      <option value='yes'>yes</option>
+      <option value='no'>no</option>
+    </select>
+  <label><br></br>Did this horse ever race outside of North America?</label>
+    <select name='foreignracing'>
+      <option value='no'>no</option>
+      <option value='yes'>yes</option>
+    </select>
+  <br></br><label>Age at first race start (days)</label><br></br>
+    <input type='checkbox' name='neverraced' value='0'>This horse never raced</input><br></br>
+    <input type='number' name='firstracedays'></input>
+  <br></br>
+<input type='submit' value='insert into database'></input></form>
+</div>
+
