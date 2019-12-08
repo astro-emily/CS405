@@ -41,20 +41,27 @@ input[type=submit]:hover {
 <div id="">
 <b id="logout"><a href="logout.php">Log Out</a></b>
 </div>
+<title></title>
+</head>
+<body>
+<div id="">
+<b id="logout"><a href="logout.php">Log Out</a></b>
+</div>
 <div id="form">
-	<h2>Living Horse Form</h2>
-        <form action=”living_data.php” method=”post”>
-      	Name<input type="text" name="name">
-	Breed<input type="text" name="breed">
-	<!--Need to add options for gender selection-->
-	Gender<input type="text" name="gender">
-	Date of Birth<input type="text" name="dob">
-	UKY Case Number<input type="number" name="UKYCase">
-	<!--Add "Yes" and "No" options-->
-	Trained<input type="text" name="trained">
-	<!--Add "Yes" and "No" options-->
-	Has this horse raced outside of the US?<input type="text" name="raceOutsideUSA">
-	How old was the horse at its first race?<input type="number" name="ageFirstRace">
+        <h2>Deceased Horse Form</h2>
+        <form action="/deceased_data.php" method="post">
+        Name<input type="text" name="name">
+        Breed<input type="text" name="breed">
+        Gender<input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        Date of Birth<input type="date" name="dob">
+        UKY Case Number<input type="number" name="UKYCase">
+        RRCase<input type="number" name="RRCase">
+        Trained?<input type="radio" name="trained" value="Yes" checked> Yes<br>
+        <input type="radio" name="trained" value="No"> No<br>
+        Did it race outside of the US?<input type="radio" name="raceOutsideUSA" value="Yes" checked> Yes<br>
+        <input type="radio" name="raceOutsideUSA" value="No"> No<br>
+        What was its age at its first race?<input type="number" name="ageFirstRace">
         <input type="submit" value="Submit">
         </form>
 </div>
