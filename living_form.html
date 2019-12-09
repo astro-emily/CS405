@@ -41,27 +41,21 @@ input[type=submit]:hover {
 <div id="">
 <b id="logout"><a href="logout.php">Log Out</a></b>
 </div>
-<title></title>
-</head>
-<body>
-<div id="">
-<b id="logout"><a href="logout.php">Log Out</a></b>
-</div>
 <div id="form">
-        <h2>Deceased Horse Form</h2>
-        <form action="/deceased_data.php" method="post">
-        Name<input type="text" name="name">
-        Breed<input type="text" name="breed">
-        Gender<input type="radio" name="gender" value="male" checked> Male<br>
+        <h2>Living Horse Form</h2>
+        <form action="/living_data.php" method="post">
+        Name<input type="text" name="name"><br>
+        Breed<input type="text" name="breed"><br>
+        Gender<input type="radio" name="gender" value="male"> Male
         <input type="radio" name="gender" value="female"> Female<br>
-        Date of Birth<input type="date" name="dob">
-        UKY Case Number<input type="number" name="UKYCase">
-        RRCase<input type="number" name="RRCase">
-        Trained?<input type="radio" name="trained" value="Yes" checked> Yes<br>
+        Date of Birth<input type="date" name="dob"><br>
+        UKY Case Number<input type="number" name="UKYCase"><br>
+        RRCase<input type="number" name="RRCase"><br>
+        Trained?<input type="radio" name="trained" value="Yes"> Yes
         <input type="radio" name="trained" value="No"> No<br>
-        Did it race outside of the US?<input type="radio" name="raceOutsideUSA" value="Yes" checked> Yes<br>
+        Did it race outside of the US?<input type="radio" name="raceOutsideUSA" value="Yes"> Yes
         <input type="radio" name="raceOutsideUSA" value="No"> No<br>
-        What was its age at its first race?<input type="number" name="ageFirstRace">
+        What was its age at its first race?<input type="number" name="ageFirstRace"><br>
         <input type="submit" value="Submit">
         </form>
 </div>

@@ -11,105 +11,263 @@
 <div id="form">
         <h2>Forelimb Form</h2>
 	<form action="forelimb_data.php" method="post">
+                Name<input type="text" name="name"><br>
                 RRCase Number<input type="number" name="RRCase"><br>
+                UKY Case Number<input type="number" name="UKYCase"><br>
                 Date of Euthensia<input type="date" name="date_of_euthansia"><br>
-                Was the phantom density normalization standard included in the scan?<input type="radio" name="density_included" value="Yes" checked>Yes<br>
-                <input type="radio" name="date_of_euthansia" value="No">No<br>
-                Leg<input type="radio" name="leg" value="Right" checked>Right<br>
+                Was the phantom density normalization standard included in the scan?<input type="radio" name="density_included" value="Yes">Yes
+                <input type="radio" name="density_included" value="No">No<br>
+                Leg<input type="radio" name="leg" value="Right">Right
                 <input type="radio" name="leg" value="Left">Left<br>
-                Distal Radius<select name="distal_radius"><br>
-                        <option value="Not Assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Distal Radius Dorsomedial<select name="distal_radius_dorsomedial"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Distal Radius Dorsolateral<select name="distal_radius_dorsolateral"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Distal Radius Palmar<select name="distal_radius_palmar"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Radiocarpal Bone<select name="central_tarsal"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Radiocarpal Bone Proximal Medial<select name="radiocarpal_bone_proximal_medial"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Radiocarpal Bone Proximal Lateral<select name="radiocarpal_bone_proximal_lateral"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Radiocarpal Bone Distal Medial<select name="radiocarpal_bone_distal_medial"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Radiocarpal Bone Distal Lateral<select name="radiocarpal_bone_distal_lateral"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Metacarpal 3<select name="metacarpal_3"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Metacarpal 3 Proximal<select name="metacarpal_3_proximal"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Metacarpal 3 Proximal Dorsal<select name="metacarpsal_3_proximal_dorsal"><br>
-                        <option value="Not assessed">Not assessed</option>
- Metacarpal 3 Proximal Palmar<select name="metacarpal_3_proximal_palmar"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Metacarpal 3 Diaphysis<select name="metacarpal_3_diaphysis"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Metacarpal 3 Diaphysis Dorsal<select name="metacarpal_3_diaphysis_dorsal"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Metacarpal 3 Diaphysis Palmar<select name="metacarpal_3_diaphysis_palmar"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Metacarpal 3 Distal<select name="metacarpal_3_distal"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Metacarpal 3 Distal Dorsal Medial<select name="metacarpal_3_distal_dorsal_medial"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Metacarpal 3 Distal Dorsal Lateral<select name="metacarpal_3_distal_dorsal_lateral"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Metacarpal 3 Distal Dorsal Sagittal Ridge<select name="metacarpal_3_distal_dorsal_sagittal_ridge"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Metacarpal 3 Distal Palmar Medial<select name="metacarpal_3_distal_palmar_medial"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Metacarpal 3 Distal Palmar Lateral<select name="metacarpal_3_distal_palmar_lateral"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Metacarpal 3 Distal Palmar Sagittal Ridge<select name="metacarpal_3_distal_palmar_sagittal_ridge"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Medial Sesamoid<select name="medial_sesamoid"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Medial Sesamoid Apical Articular<select name="medial_sesamoid_apical_articular"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Medial Sesamoid Apical non Articular<select name="medial_sesamoid_apical_non_Articular"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Medial Sesamoid Midbody Articular<select name="medial_sesamoid_midbody_articular"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Medial Sesamoid Base Articular<select name="medial_sesamoid_midbody_non_articular"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Medial Sesamoid Base Non Articular<select name="medial_sesamoid_base_non_articular"><br>
-<option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Medial Sesamoid Axial Articular<select name="medial_sesamoid_axial_articular"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-                Medial Sesamoid Axial Non Articular<select name="medial_sesamoid_axial_non_articular"><br>
-                        <option value="Not assessed">Not assessed</option>
-                        <option value="Assessed">Assessed</option>
-<input type="submit" value="Submit">
+                Distal Radius<select name="distal_radius">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Distal Radius Dorsomedial<select name="distal_radius_dorsomedial">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Distal Radius Dorsolateral<select name="distal_radius_dorsolateral">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Distal Radius Palmar<select name="distal_radius_palmar">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Radiocarpal Bone<select name="central_tarsal">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Radiocarpal Bone Proximal Medial<select name="radiocarpal_bone_proximal_medial">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Radiocarpal Bone Proximal Lateral<select name="radiocarpal_bone_proximal_lateral">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Radiocarpal Bone Distal Medial<select name="radiocarpal_bone_distal_medial">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Radiocarpal Bone Distal Lateral<select name="radiocarpal_bone_distal_lateral">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Metacarpal 3<select name="metacarpal_3">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Metacarpal 3 Proximal<select name="metacarpal_3_proximal">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Metacarpal 3 Proximal Dorsal<select name="metacarpsal_3_proximal_dorsal">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Metacarpal 3 Proximal Palmar<select name="metacarpal_3_proximal_palmar">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Metacarpal 3 Diaphysis<select name="metacarpal_3_diaphysis">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Metacarpal 3 Diaphysis Dorsal<select name="metacarpal_3_diaphysis_dorsal">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Metacarpal 3 Diaphysis Palmar<select name="metacarpal_3_diaphysis_palmar">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Metacarpal 3 Distal<select name="metacarpal_3_distal">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Metacarpal 3 Distal Dorsal Medial<select name="metacarpal_3_distal_dorsal_medial">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Metacarpal 3 Distal Dorsal Lateral<select name="metacarpal_3_distal_dorsal_lateral">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Metacarpal 3 Distal Dorsal Sagittal Ridge<select name="metacarpal_3_distal_dorsal_sagittal_ridge">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Metacarpal 3 Distal Palmar Medial<select name="metacarpal_3_distal_palmar_medial">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Metacarpal 3 Distal Palmar Lateral<select name="metacarpal_3_distal_palmar_lateral">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Metacarpal 3 Distal Palmar Sagittal Ridge<select name="metacarpal_3_distal_palmar_sagittal_ridge">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Medial Sesamoid<select name="medial_sesamoid">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Medial Sesamoid Apical Articular<select name="medial_sesamoid_apical_articular">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Medial Sesamoid Apical non Articular<select name="medial_sesamoid_apical_non_Articular">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Medial Sesamoid Midbody Articular<select name="medial_sesamoid_midbody_articular">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Medial Sesamoid Base Articular<select name="medial_sesamoid_midbody_non_articular">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Medial Sesamoid Base Non Articular<select name="medial_sesamoid_base_non_articular">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Medial Sesamoid Axial Articular<select name="medial_sesamoid_axial_articular">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+                Medial Sesamoid Axial Non Articular<select name="medial_sesamoid_axial_non_articular">
+                        <option value="Not Assessed">Not Assessed</option>
+                        <option value="Normal">Within Normal Limits</option>
+                        <option value="Lesion">Cyst-Like Lesion</option>
+                        <option value="Fracture">Fracture</option>
+                        <option value="Lysis">Lysis</option>
+                        <option value="Sclerosis">Sclerosis</option>    
+                </select><br>
+        <input type="submit" value="Submit">
         </form>
 </div>
 </body>
